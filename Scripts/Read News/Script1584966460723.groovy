@@ -18,11 +18,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://[::1]/CodeIgniter-3.1.11/index.php/news')
+WebUI.navigateToUrl('http://[::1]/tts/index.php/news/')
 
-WebUI.click(findTestObject('Page_CodeIgniter Tutorial/a_Delete'))
+expected = WebUI.getText(findTestObject('td_Test'))
 
-WebUI.click(findTestObject('Page_CodeIgniter Tutorial/a_Delete'))
+WebUI.click(findTestObject('Object Repository/a_View'))
+
+actual = WebUI.getText(findTestObject('h2_Test'))
+
+WebUI.verifyMatch(actual, expected, false)
 
 WebUI.closeBrowser()
 

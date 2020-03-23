@@ -18,15 +18,15 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://[::1]/CodeIgniter-3.1.11/index.php/news')
+WebUI.navigateToUrl('http://localhost/tts/index.php/news')
 
-WebUI.click(findTestObject('Object Repository/Page_CodeIgniter Tutorial/a_Edit'))
+WebUI.click(findTestObject('Page_CodeIgniter/a_Edit'))
 
-WebUI.doubleClick(findTestObject('Page_CodeIgniter Tutorial/input_Title_title'))
+WebUI.doubleClick(findTestObject('Page_CodeIgniter/input_Title_title'))
 
-WebUI.setText(findTestObject('Page_CodeIgniter Tutorial/input_Title_title'), '1')
+WebUI.setText(findTestObject('Page_CodeIgniter/input_Title_title'), '1')
 
-WebUI.click(findTestObject('Object Repository/Page_CodeIgniter Tutorial/input_hgjhghj_submit'))
+WebUI.click(findTestObject('Page_CodeIgniter/input_jajal_submit'))
 
 WebUI.closeBrowser()
 

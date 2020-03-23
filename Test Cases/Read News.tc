@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Ini untuk read news</description>
+   <name>Read News</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>96896955-1a71-4e0e-a948-28a7e06a3dea</testCaseGuid>
+</TestCaseEntity>

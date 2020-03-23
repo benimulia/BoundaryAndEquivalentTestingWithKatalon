@@ -15,16 +15,44 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost/tts/index.php/news')
+WebUI.navigateToUrl('http://[::1]/tts/index.php/news/')
 
-WebUI.click(findTestObject('Page_CodeIgniter/a_Edit'))
+WebDriver driver = DriverFactory.getWebDriver()
 
-WebUI.setText(findTestObject('Page_CodeIgniter/textarea_jajal'), '9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999')
+'To locate table'
+WebElement Table = driver.findElement(By.xpath('//table/tbody'))
 
-WebUI.click(findTestObject('Page_CodeIgniter/input_jajal_submit'))
+'To locate rows of table it will Capture all the rows available in the table'
+List<WebElement> rows_table = Table.findElements(By.tagName('tr'))
+
+'To calculate no of rows In table'
+int rows_count = rows_table.size()
+
+println('No. of rows: ' + rows_count)
+
+WebUI.click(findTestObject('a_Delete'))
+
+WebUI.acceptAlert(FailureHandling.CONTINUE_ON_FAILURE)
+
+WebDriver driver2 = DriverFactory.getWebDriver()
+
+'To locate table'
+WebElement Table2 = driver2.findElement(By.xpath('//table/tbody'))
+
+'To locate rows of table it will Capture all the rows available in the table'
+List<WebElement> rows_table2 = Table.findElements(By.tagName('tr'))
+
+'To calculate no of rows In table'
+int rows_count2 = rows_table2.size()
+
+println('No. of rows: ' + rows_count2)
+
+WebUI.verifyNotMatch(rows_count, rows_count2, false)
 
 WebUI.closeBrowser()
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_hgjhghj_submit</name>
+   <name>input_jajal_submit</name>
    <tag></tag>
    <elementGuidId>42931992-c60a-42ab-a51e-e58fae9cdb30</elementGuidId>
    <selectorCollection>
